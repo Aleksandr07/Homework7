@@ -50,10 +50,12 @@ public class Main {
         int population = 12_000_000;
         int birthRateIn1000 = 17;
         int deathRateIn1000 = 8;
-        int birthRate = birthRateIn1000 * population / 1000;
-        int deathRate = deathRateIn1000 *population / 1000;
+        int birthRate;
+        int deathRate;
         int year = 0;
         while (year < 10) {
+            birthRate = birthRateIn1000 * population / 1000;
+            deathRate = deathRateIn1000 * population / 1000;
             year++;
             population = population + birthRate - deathRate;
             System.out.println("Год " + year + ", численность населения составляет " + population);
